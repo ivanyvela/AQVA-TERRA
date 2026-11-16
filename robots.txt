@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap & LLM context
+Sitemap: https://aqvaterra.org/sitemap.xml

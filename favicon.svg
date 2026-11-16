@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Background Circle -->
+    <clipPath id="circleClip">
+      <circle cx="128" cy="128" r="116" />
+    </clipPath>
+    <!-- Wave Gradient -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#104E7A" />
+      <stop offset="50%" stop-color="#247BA0" />
+      <stop offset="100%" stop-color="#072B49" />
+    </linearGradient>
+    <!-- Earth Gradient Top -->
+    <linearGradient id="earthGradTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B57E3C" />
+      <stop offset="100%" stop-color="#8C5824" />
+    </linearGradient>
+    <!-- Earth Gradient Bottom -->
+    <linearGradient id="earthGradBottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6E4721" />
+      <stop offset="100%" stop-color="#3D2510" />
+    </linearGradient>
+    <!-- Water Drop Gradient -->
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#247BA0" />
+      <stop offset="100%" stop-color="#104E7A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Ring Base -->
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#104E7A" stroke-width="8" />
+
+  <g clip-path="url(#circleClip)">
+    <!-- Off-white inner background -->
+    <rect width="256" height="256" fill="#F7F6F2" />
+
+    <!-- Wave in upper hemisphere -->
+    <path d="M 12 128 C 30 70, 75 35, 128 35 C 180 35, 225 70, 244 128 C 210 100, 175 105, 150 120 C 120 138, 70 120, 12 128 Z" fill="url(#waveGrad)" />
+    <!-- Wave crest curl -->
+    <path d="M 45 125 C 70 85, 110 50, 145 60 C 130 75, 105 85, 125 110 C 95 105, 70 115, 45 125 Z" fill="#247BA0" opacity="0.9" />
+
+    <!-- Strata bands (pages/layers) -->
+    <path d="M 12 128 Q 128 150 244 128 L 244 142 Q 128 165 12 142 Z" fill="#F7F6F2" />
+    <path d="M 12 142 Q 128 165 244 142 L 244 156 Q 128 180 12 156 Z" fill="url(#earthGradTop)" />
+    <path d="M 12 156 Q 128 180 244 156 L 244 168 Q 128 192 12 168 Z" fill="#F7F6F2" />
+
+    <!-- Lower earth basin -->
+    <path d="M 12 168 Q 128 192 244 168 A 116 116 0 0 1 12 168 Z" fill="url(#earthGradBottom)" />
+
+    <!-- Central Drop with clean white border -->
+    <path d="M 128 160 C 112 185, 98 205, 98 220 A 30 30 0 0 0 158 220 C 158 205, 144 185, 128 160 Z" fill="#F7F6F2" />
+    <path d="M 128 168 C 116 190, 105 208, 105 220 A 23 23 0 0 0 151 220 C 151 208, 140 190, 128 168 Z" fill="url(#dropGrad)" />
+    <!-- Drop specular highlight -->
+    <path d="M 116 208 C 113 214, 114 222, 118 226 C 117 222, 116 215, 119 210 Z" fill="#FFFFFF" opacity="0.85" />
+  </g>
+</svg>
