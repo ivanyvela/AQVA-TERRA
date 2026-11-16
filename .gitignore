@@ -1,0 +1,8 @@
+# Operating System & Metadata Files
+*:Zone.Identifier
+*.Zone.Identifier
+.DS_Store
+Thumbs.db
+
+# Backups & Raw Work Files
+logo to modify_backup.png
